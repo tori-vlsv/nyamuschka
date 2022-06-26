@@ -86,8 +86,10 @@
     transition: background-color .5s;
     cursor: pointer;
     overflow: hidden;
+    transition-delay: 1s;
     &:hover {
       background-color: $weight;
+      transition-delay: 0s;
     }
   }
   &__container {
