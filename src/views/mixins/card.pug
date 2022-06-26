@@ -1,0 +1,23 @@
+mixin card(id, checked, disabled, text, text_selected, title, type, content, img, weight, description, description_selected, description_disabled)
+  .card
+    label(for=""+id).card__wrapper
+      if (disabled) 
+        input(id=""+id type="checkbox" disabled)
+      else if (checked) 
+        input(id=""+id type="checkbox" checked)
+      else 
+        input(id=""+id type="checkbox")
+      .card__bg
+        .card__container
+          .card__text= text
+          .card__text.card__text-selected= text_selected
+          h2= title
+          .card__type= type
+          p !{content}
+          img(src=""+img, alt="cat")
+          .card__weight 
+            .card__weight__number= weight
+            .card__weight__kilo кг 
+    .card__description !{description}
+    .card__description.card__description-selected= description_selected
+    .card__description.card__description-disabled= description_disabled

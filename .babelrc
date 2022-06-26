@@ -1,0 +1,29 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "modules": false,
+        "targets": {
+          "node": "current"
+        }
+      }
+    ]
+  ],
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "alias": {
+          "src": "./src",
+          "styles": "./src/assets/styles",
+          "images": "./src/assets/images",
+          "js": "./src/assets/js"
+        }
+      }
+    ]
+  ],
+  "ignore": [
+    "node_modules"
+  ]
+}
